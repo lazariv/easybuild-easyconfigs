@@ -10,6 +10,7 @@ toolchain = {'name': 'fosscuda', 'version': '2019a'}
 
 source_urls = ['https://github.com/rstudio/rstudio/archive']
 sources = ['v%(version)s.tar.gz']
+checksums = ['0d1ec7aef62bda1ceec364e372fdbbcc4da502a3f03eddcddc700bdead6ee840']
 
 builddependencies = [
     ('pkg-config', '0.29.2'),
