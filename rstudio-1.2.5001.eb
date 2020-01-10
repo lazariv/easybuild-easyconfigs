@@ -1,0 +1,35 @@
+easyblock = 'CMakeMake'
+
+name = 'rstudio'
+version = '1.2.5001'
+
+homepage = 'https://www.rstudio.com/products/rstudio/download/'
+description = """RStudio is a set of integrated tools designed to help you be
+more productive with R.""" 
+toolchain = {'name': 'fosscuda', 'version': '2019a'}
+
+source_urls = ['https://github.com/rstudio/rstudio/archive']
+sources = ['v%(version)s.tar.gz']
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('CMake', '3.13.3'),
+    ('ant', '1.10.1-Java-1.8.0_191.b12-1.el7_6')
+]
+
+dependencies = [
+    ('Boost', '1.69.0'), # needs to be loaded, otherwise >> rserver: error while loading shared libraries: libboost_atomic.so.1.69.0: cannot open shared object file: No such file or directory
+    ('R', '3.6.0')
+]
+
+osdependencies = [('pam-devel')]
+
+preconfigopts = "cd dependencies/common && ./install-dictionaries && ./install-pandoc && ./install-mathjax && ./install-gwt && cd ../.. && "
+configopts = "-DRSTUDIO_TARGET=Server -DCMAKE_BUILD_TYPE=Release -DRSTUDIO_BOOST_SIGNALS_VERSION=2"
+
+sanity_check_paths = {
+    'files': ["bin/rstudio-server"],
+    'dirs': ['bin', 'extras', 'resources', 'www', 'www-symbolmaps', 'R'],
+}
+
+moduleclass = 'lang'
