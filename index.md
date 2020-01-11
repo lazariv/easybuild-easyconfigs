@@ -1,9 +1,9 @@
 ### Hello World!
 
-Here are some links to my GitHub repositories
+Here are some useful EasyBuild easyconfig files 
 
 [https://github.com/lazariv/easybuild-easyconfigs](https://github.com/lazariv/easybuild-easyconfigs)
 
-My RStudio Server Easybuild easyconfigs repository:
+- My RStudio Server Easybuild easyconfig files: [link](https://github.com/lazariv/easybuild-easyconfigs/tree/master/rstudio)
 
-[https://github.com/lazariv/easybuild-easyconfigs/tree/master/rstudio](https://github.com/lazariv/easybuild-easyconfigs/tree/master/rstudio)
+- My Arrow Easybuild easyconfig files: [link](https://github.com/lazariv/easybuild-easyconfigs/tree/master/Arrow)
