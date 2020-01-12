@@ -1,4 +1,7 @@
-### Hello World!
+---
+layout: default
+title: My page
+---
 
 Here are some useful EasyBuild easyconfig files 
 
